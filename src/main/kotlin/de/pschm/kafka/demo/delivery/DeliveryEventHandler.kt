@@ -19,14 +19,14 @@ import javax.persistence.PostUpdate
 class DeliveryEventHandler(
     @Value("\${spring.kafka.topic.producer.delivery}") val topic: String,
     private val kafkaMessageProducer: KafkaMessageProducer,
-    private val deliveryKafkaPublisher: DeliveryKafkaPublisher
+    //private val deliveryKafkaPublisher: DeliveryKafkaPublisher
 ) {
     private val eventVersion = 1
     private val log = KotlinLogging.logger { }
 
     @PostRemove
     fun postRemove(delivery: Delivery) {
-        deliveryKafkaPublisher.publishDeliveryEvent(delivery, CrudEventType.DELETED.name)
+        //deliveryKafkaPublisher.publishDeliveryEvent(delivery, CrudEventType.DELETED.name)
         kafkaMessageProducer.send(topic, buildDeliveryDomainEvent(delivery.toDto(), CrudEventType.DELETED))
     }
 

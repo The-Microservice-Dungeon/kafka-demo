@@ -30,6 +30,8 @@ repositories {
 }
 
 val springBootVersion = "2.5.6"
+val kafkaVersion = "2.7.9"
+
 
 dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
