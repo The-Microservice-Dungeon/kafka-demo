@@ -30,7 +30,7 @@ repositories {
 }
 
 val springBootVersion = "2.5.6"
-val kafkaVersion = "2.7.9"
+val kafkaVersion = "2.7.6"
 
 
 dependencies {
