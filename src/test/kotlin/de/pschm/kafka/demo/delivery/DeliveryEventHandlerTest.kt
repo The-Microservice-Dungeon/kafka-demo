@@ -1,5 +1,7 @@
 package de.pschm.kafka.demo.delivery
 
+import de.pschm.kafka.demo.delivery.Delivery
+import de.pschm.kafka.demo.delivery.DeliveryRepository
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import org.springframework.beans.factory.annotation.Autowired
@@ -11,7 +13,7 @@ import org.springframework.test.annotation.DirtiesContext
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @DirtiesContext
-@EmbeddedKafka(topics = ["delivery"])
+//@EmbeddedKafka(topics = ["delivery"])
 class DeliveryEventHandlerTest {
 
     @Autowired

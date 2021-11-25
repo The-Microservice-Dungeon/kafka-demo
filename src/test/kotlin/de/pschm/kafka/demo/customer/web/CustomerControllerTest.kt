@@ -1,7 +1,8 @@
-package de.pschm.kafka.demo.customer
+package de.pschm.kafka.demo.customer.web
 
 import de.pschm.kafka.demo.TestUtil
 import de.pschm.kafka.demo.core.util.UriUtil
+import de.pschm.kafka.demo.customer.CustomerDto
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 import org.springframework.boot.test.context.SpringBootTest
